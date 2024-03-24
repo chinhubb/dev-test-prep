@@ -46,11 +46,10 @@ func merge(collection_1, collection_2, collection_3 []int) []int {
 			continue
 		}
 
-		//    smallest ->  1,3 and largest -> 2
 		if collection_1[i] <= collection_3[k] && collection_1[i] <= collection_2[j] {
 			result[p] = collection_1[i]
 			i++
-		} else if collection_3[k] <= collection_2[j] {
+		} else if collection_3[k] <= collection_1[i] && collection_3[k] <= collection_2[j] {
 			result[p] = collection_3[k]
 			k++
 		} else {
